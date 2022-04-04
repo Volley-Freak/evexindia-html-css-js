@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+}
+body {
+  background-color: black !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  75% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-in-out;
+}
+.slide-in-right {
+  animation: slideInRight 0.6s ease-in-out;
+}
+.navbar {
+  padding: 0 !important;
+  height: 80px !important;
+  /* position: fixed;
+  z-index: 10;
+  top: 0; */
+}
+.fa-bars {
+  font-size: 2rem;
+}
+
+ul.navbar-ul {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 0;
+}
+.nav-item {
+  margin: 0px 20px;
+  text-transform: uppercase;
+}
+.show ul li {
+  margin: 5px;
+}
+.nav-link {
+  color: black !important;
+}
+.model {
+  color: red !important;
+}
+.dropdown-menu li {
+  margin: 5px 0;
+}
+.dropdown-menu li a {
+  color: white;
+}
+.dropdown-item {
+  color: white;
+  text-transform: capitalize;
+  font-family: "Alef", sans-serif;
+  font-size: 0.8rem;
+}
+.nav-link:hover {
+  color: red !important;
+}
+@media screen and (max-width: 992px) {
+  .dealer-btn {
+    display: none;
+  }
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.hero::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: black url("assets/hero.png") center/cover no-repeat;
+  position: absolute;
+  top: 80px;
+  z-index: -1;
+  opacity: 0.4;
+}
+.row {
+  margin: 0 !important;
+}
+.company-name {
+  font-size: 5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 70px;
+  text-align: center;
+}
+.company-more-info {
+  font-size: 15px;
+  padding: 0 7rem !important;
+}
+.company-more-info .title {
+  font-size: 2.5em;
+}
+.company-more-info .description {
+  font-size: 1.5em;
+  color: rgb(216, 216, 216);
+}
+
+/* PRODUCTS */
+.container{
+    max-width: 100%;
+}
+.products {
+  background-color: white;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 7rem;
+}
+.product {
+  height: 50vh;
+  width: 100%;
+}
+.product-container {
+  margin-top: 2rem;
+}
+.product-container .heading {
+  font-size: 3rem;
+  line-height: 45px;
+  font-weight: 600;
+  color: black;
+  display: inline-block;
+  /* padding: 2rem 0;
+    background: url(/src/assets/bg.png) no-repeat;
+    background-position: 5% 0%; */
+}
+.product img {
+  height: 100%;
+  width: 100%;
+}
+.product-info {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 0 5em; */
+}
+.product-info .title {
+  font-size: 3.2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 960px) {
+  .product {
+    display: flex;
+    flex-direction: column;
+  }
+  .products{
+      padding: 0;
+  }
+}
+
+.card {
+  border: none !important;
+}
+
+.speed-max-speed {
+  display: flex;
+  margin: 1em 0;
+}
+.speed-max-speed hr {
+  width: 5px;
+  height: 70px;
+  background-color: black;
+  margin: 0 3em;
+}
+
+.speed h3,
+.max-speed h3 {
+  font-size: 2.4em;
+}
+.speed p,
+.max-speed p {
+  margin-top: -1em;
+  text-align: center;
+  font-size: 0.9em;
+}
+.product .description {
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  line-height: 33px;
+}
+.product-btn {
+  margin-top: 2em;
+  font-size: 1.3em;
+  width: 250px;
+  height: 50px;
+  color: white;
+  background-color: #bb2f37;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-btn:hover {
+  color: #bb2f37;
+  font-weight: 500;
+  border: 2px solid #bb2f37;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+/* FOOTER  */
+footer .logo-container {
+    margin-bottom: 20px;
+  }
+  footer .about {
+    margin-top: -15px;
+  }
+  
+  /* back to top  */
+  #btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    display: none;
+  }
+  #leave-message {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
