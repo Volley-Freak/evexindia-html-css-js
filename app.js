@@ -7,10 +7,45 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
+  // TOP TO BOTTOM BUTTON
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
+  }
+
+  // CHANGE NAVBAR
+  let navbar = document.querySelector(".navbar");
+  let dealerBtn = document.querySelector("#become-dealer-btn");
+  let navLinks = document.querySelectorAll(".nav-link");
+  if (window.scrollY > 620) {
+    // NABAR
+    navbar.classList.remove("bg-light");
+    navbar.classList.add("bg-dark");
+
+    // DEALER-BUTTON
+    dealerBtn.classList.remove("btn-dark");
+    dealerBtn.classList.add("btn-outline-light");
+
+    // NAV-LINK
+    navLinks.forEach((navLink) => {
+      navLink.classList.remove("text-dark");
+      navLink.classList.add("text-light");
+    });
+  } else {
+    // NAVBAR
+    navbar.classList.remove("bg-dark");
+    navbar.classList.add("btn-outline-light");
+
+    // DEALER-BUTTON
+    dealerBtn.classList.remove("btn-outlind-light");
+    dealerBtn.classList.add("btn-dark");
+
+    // NAV-LINK
+    navLinks.forEach((navLink) => {
+      navLink.classList.remove("text-light");
+      navLink.classList.add("text-dark");
+    });
   }
 }
 // When the user clicks on the button, scroll to the top of the document
